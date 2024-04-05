@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        button{
+            margin-left: 0px;
+            font-size: 10px;
+        }
+        .onfan{
+            animation: rotate 1.2s linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .one{
+            animation: rotate 1.0s linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .two{
+            animation: rotate 0.5s linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .three{
+            animation: rotate 0.2s linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+       .A1{
+        width: 15px;
+        height: 150px;
+        border: 1px solid black;
+        margin-top: -76px;
+        background-color: rgb(3, 3, 24);
+        z-index: 0;
+        position: relative;
+       }
+       .A2{
+        width: 150px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: rgb(3, 3, 21);
+       }
+       .A3{
+       margin-top: -80px;
+       }
+      
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Fan on/off By Switch</h1>
+       <img id="fanon" src="Fan2.JPEG" alt="">
+        <div class="A1"></div>
+        <div class="A2"></div>
+        <div class="A3">
+        <button onclick="on() ">ON</button>
+        <button onclick="one()">1</button>
+        <button onclick="two()">2</button>
+        <button onclick="three()">3</button>
+        <button onclick="off()">OFF</button>
+    </div>
+    </center>
+
+    <script>
+
+function on()
+{
+    document.getElementById("fanon").className='onfan';
+}
+function off()
+{
+    document.getElementById("fanon").className='off';
+}
+function one(){
+    document.getElementById("fanon").className='one';
+}
+function two(){
+    document.getElementById("fanon").className='two';
+}
+function three(){
+    document.getElementById("fanon").className='three';
+}
+
+    </script>
+</body>
+</html>
